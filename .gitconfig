@@ -1,0 +1,13 @@
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
+[user]
+	email = merkushin.m.s@gmail.com
+	name = Michael Merkushin
+	signingkey = A206C09E
+[push]
+	default = current
+[color]
+	ui = true
+[commit]
+	gpgsign = true
