@@ -64,11 +64,7 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  ruby
-  heroku
   command-not-found
-  python
-  pip
   gnu-utils
   history-substring-search
   zsh-syntax-highlighting
@@ -119,19 +115,27 @@ alias gu='git pull origin'
 alias gl='git log'
 
 # MY VARS
-export ULTRAHOOK_API_KEY=
 export DOCKER_TLD=localhost
 
 DEFAULT_USER=merkushin
 
 prompt_dir() {
-  prompt_segment blue black '%2/'
+  prompt_segment blue black '%3/'
 }
+
+#export UID=$(id -u)
+#export GID=$(id -g)
+
+# apress
+export DOCKER_TLD=localhost
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
-export RBENV_VERSION="2.5.1"
+export RBENV_VERSION="2.6.5"
 eval "$(rbenv init -)"
+
+# homebrew
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 # dip
 eval "$(dip console)"

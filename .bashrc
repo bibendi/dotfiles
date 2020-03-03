@@ -139,11 +139,11 @@ fi
 
 alias compile-ssh-config='echo -n > ~/.ssh/config && (cat ~/code/gems/ssh-config/pulscen/ssh_config ~/code/gems/ssh-config/barmen/ssh_config ~/code/gems/ssh-config/cosmos/ssh_config ~/code/gems/ssh-config/twinkle/ssh_config) > ~/.ssh/config'
 
-export APRESS_GEMS_CREDENTIALS='merkushin:PASSWORD'
-export DOCKER_TLD=docker
+export DOCKER_TLD=localhost
 export GPG_TTY=$(tty)
 
 # added by travis gem
 [ -f /home/merkushin/.travis/travis.sh ] && source /home/merkushin/.travis/travis.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
